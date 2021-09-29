@@ -3,11 +3,15 @@ A simple password manager that uses the Fernet module from the [Cryptography](ht
 
 We STRONGLY recommend first obfuscating the program then using it, a library like pyarmor will work fine.
 
+## Requirements 
+Python >= 3.6
+
 ## Installation
 
 ```bash
 $ pip install cryptography
 ```
+Then just run the main.py file in CMD or any linux Terminal you prefer.
 
 ## Contributing
 Please feel free to open a issue, or a pull request if you have found any bugs, or have any ideas.
