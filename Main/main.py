@@ -64,39 +64,36 @@ def write_password():
     website_name = input("Enter the website here :  ")
     email_address = input("Enter the email here : ")
 
-    file_write = open("Sign.txt", "a")
-    file_write.write(
-        fer.encrypt(username.encode()).decode() + "\n" + fer.encrypt(password.encode()).decode() + "\n" + fer.encrypt(
-            email_address.encode()).decode() + "\n" + fer.encrypt(website_name.encode()).decode() + "\n")
-    file_write.close()
+    with open("Sign.txt", "a") as file_write:
+        file_write.write(
+            fer.encrypt(username.encode()).decode() + "\n" + fer.encrypt(
+                password.encode()).decode() + "\n" + fer.encrypt(
+                email_address.encode()).decode() + "\n" + fer.encrypt(website_name.encode()).decode() + "\n")
     print("\nPassword successfully stored and encrypted.")
 
     another_password = input("Would you like to write another one?\n")
-    if another_password.lower() in ['yes' , 'y' , 'w' , 'write']:
-       write_password()
+    if another_password.lower() in ['yes', 'y', 'w', 'write']:
+        write_password()
     else:
         exit()
 
-
-def read_password():
-    file_read = open("Sign.txt", 'rb')
-    content = file_read.readlines()
-    print_counter = 0
-    for i in range(len(content)):
-        print(fer.decrypt(content[i]).decode())
-        print_counter += 1
-        if (print_counter & 3) == 0:
-            print("")
-            print("")
-    file_read.close()
+def read_password(Filename : str = "Sign.txt"):
+   with open(Filename, 'rb') as file_read:
+        content = file_read.readlines()
+        print_counter = 0
+        for i in range(len(content)):
+            print(fer.decrypt(content[i]).decode())
+            print_counter += 1
+            if (print_counter & 3) == 0:
+                print("\n\n")
 
 
 welcome = input("\nWelcome, would you like to write or read a password today?\n"
                 "Please type 'W' for write and 'R' for read :  \n")
 
-if welcome.lower() == ['write', 'w', 'yes', 'y']:
+if welcome == 'write' or welcome == 'w' or welcome == 'y' or welcome == 'yes':
     write_password()
-elif welcome.lower() == ['read', 'r', ]:
+elif welcome == 'read' or welcome == 'r' or welcome == 'Read' or welcome == 'R':
     read_password()
 else:
     print('\nIncorrect input')
