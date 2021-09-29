@@ -80,7 +80,6 @@ def write_password():
 
 
 def read_password():
-    print("")
     file_read = open("Sign.txt", 'rb')
     content = file_read.readlines()
     print_counter = 0
@@ -89,11 +88,12 @@ def read_password():
         print_counter += 1
         if (print_counter & 3) == 0:
             print("")
+            print("")
     file_read.close()
 
 
 welcome = input("\nWelcome, would you like to write or read a password today?\n"
-                "Please type 'W' for write and 'R' for read :  ")
+                "Please type 'W' for write and 'R' for read :  \n")
 
 if welcome == 'W' or welcome == 'w' or welcome == 'write' or welcome == 'Write':
     write_password()
