@@ -6,16 +6,8 @@ def generate_sum():
     sum = Fernet.generate_key()
     with open("sum.key", "wb") as sum_file:
         sum_file.write(sum)
-generate_sum()
-
-def create_pin():
-    pid = input("Enter your pin")
-    with open("PID.key", 'wb') as pid_file:
-        pid_file.write(fer.encrypt(pid.encode()))
-create_pin()
 
 
-'''
 def get_sum():
     file = open("sum.key", "rb")
     key_1 = file.read()
@@ -23,10 +15,20 @@ def get_sum():
     return key_1
 
 
+generate_sum()
 key = get_sum()
 fer = Fernet(key)
 
 
+def create_pin():
+    pid = input("Enter your pin")
+    with open("PID.key", 'wb') as pid_file:
+        pid_file.write(fer.encrypt(pid.encode()))
+
+
+create_pin()
+
+'''
 def get_pin(pin: str):
     with open("PID.key", "rb") as pid_file:
         for line in pid_file.readlines():
