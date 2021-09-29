@@ -67,15 +67,8 @@ def write_password():
     print("\nPassword successfully stored and encrypted.")
 
     another_password = input("Would you like to write another one?\n")
-    if another_password == 'yes' \
-            or another_password == 'y' \
-            or another_password == 'Yes'\
-            or another_password == 'Y' \
-            or another_password == 'w' \
-            or another_password == 'W'\
-            or another_password == 'write' \
-            or another_password == 'Write':
-        write_password()
+    if another_password.lower() in ['yes' , 'y' , 'w' , 'write']:
+       write_password()
     else:
         exit()
 
