@@ -58,7 +58,7 @@ def write_password():
     website_name = input("Enter the website here :  ")
     email_address = input("Enter the email here : ")
 
-    file_write = open("password.txt", "a")
+    file_write = open("Sign.txt", "a")
     file_write.write(
         fer.encrypt(username.encode()).decode() + "\n" + fer.encrypt(password.encode()).decode() + "\n" + fer.encrypt(
             email_address.encode()).decode() + "\n" + fer.encrypt(website_name.encode()).decode() + "\n")
@@ -81,7 +81,7 @@ def write_password():
 
 def read_password():
     print("")
-    file_read = open("password.txt", 'rb')
+    file_read = open("Sign.txt", 'rb')
     content = file_read.readlines()
     print_counter = 0
     for i in range(len(content)):
