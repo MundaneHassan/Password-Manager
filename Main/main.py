@@ -89,9 +89,9 @@ def read_password():
 welcome = input("\nWelcome, would you like to write or read a password today?\n"
                 "Please type 'W' for write and 'R' for read :  \n")
 
-if welcome == 'W' or welcome == 'w' or welcome == 'write' or welcome == 'Write':
+if welcome.lower() == ['write', 'w', 'yes', 'y']:
     write_password()
-elif welcome == 'R' or welcome == 'r' or welcome == 'read' or welcome == 'Read':
+elif welcome.lower() == ['read', 'r', ]:
     read_password()
 else:
     print('\nIncorrect input')
