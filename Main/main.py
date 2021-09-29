@@ -14,6 +14,7 @@ def create_pin():
         pid_file.write(fer.encrypt(pid.encode()))
 create_pin()
 
+
 '''
 def get_sum():
     file = open("sum.key", "rb")
