@@ -17,6 +17,7 @@ After that, comment from line 4 to 11, then 25 to 32 and uncomment from line 34 
 
 ## TO-DO
 A Gui.
+Multiple Users.
 
 ## Contributing
 Please feel free to open a issue, or a pull request if you have found any bugs, or have any ideas.
