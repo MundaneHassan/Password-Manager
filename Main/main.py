@@ -77,6 +77,7 @@ def write_password():
     else:
         exit()
 
+
 def read_password(Filename : str = "Sign.txt"):
    with open(Filename, 'rb') as file_read:
         content = file_read.readlines()
