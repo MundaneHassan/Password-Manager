@@ -23,7 +23,7 @@ fer = Fernet(key)
 
 
 def create_pin():
-    pid = input("Enter your pin:  ")
+    pid = input("Enter your pin, please save this pin in a physical location:  ")
     with open("PID.key", 'wb') as pid_file:
         pid_file.write(fer.encrypt(pid.encode()))
         
