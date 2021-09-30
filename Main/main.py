@@ -78,15 +78,15 @@ def write_password():
         exit()
 
 
-def read_password(Filename : str = "Sign.txt"):
-   with open(Filename, 'rb') as file_read:
+def read_password(Filename: str = "Sign.txt"):
+    with open(Filename, 'rb') as file_read:
         content = file_read.readlines()
         print_counter = 0
         for i in range(len(content)):
             print(fer.decrypt(content[i]).decode())
             print_counter += 1
             if (print_counter & 3) == 0:
-                print("\n\n")
+                print("\n")
 
 
 welcome = input("\nWelcome, would you like to write or read a password today?\n"
