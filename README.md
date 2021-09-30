@@ -23,7 +23,7 @@ Multiple Users.
 Please feel free to open a issue, or a pull request if you have found any bugs, or have any ideas.
 
 ## License
-[MIT](https://opensource.org/licenses/MIT/)
+[MIT](https://github.com/MundaneHassan/Password-Manager/blob/main/LICENSE)
 
 ## Disclaimer
 This password manager was built for educational purposes. Please use at your own risk.
