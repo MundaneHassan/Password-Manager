@@ -12,8 +12,7 @@ Python >= 3.6
 ```bash
 $ pip install cryptography
 ```
-Then just run the main.py file in CMD or any linux Terminal you prefer, you will input your PIN and then close the program.
-After that, comment from line 4 to 10, then 22 to 28 and uncomment from line 30 to 98 by removing the apostrophes, obfuscate it and you're done.
+Then just run the main.py file in CMD or any linux Terminal you prefer.
 
 ## TO-DO
 A Gui.
