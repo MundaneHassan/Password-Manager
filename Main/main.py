@@ -11,7 +11,7 @@ class PasswordManager:
         """
         `__init__()`
         if `sum.bin` or `PID.bin` not in current directory then,
-        will create file(s) and store the require data.
+        will create the file(s) and store the require data.
         and run the Initial code.
         """
         if "sum.bin" not in os.listdir():
@@ -41,8 +41,6 @@ class PasswordManager:
                 self.__store_details()
             elif __welcome[0] == "r":
                 self.__print_details()
-
-            # If user want to do more work
 
             more = input("Want to do more operations (y/n)?- ").lower()
             if more[0] != "y":
