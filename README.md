@@ -17,6 +17,7 @@ Then just run the main.py file in CMD or any linux Terminal you prefer.
 ## TO-DO
 A Gui.
 Multiple Users.
+Email OTP.
 
 ## Contributing
 Please feel free to open a issue, or a pull request if you have found any bugs, or have any ideas.
