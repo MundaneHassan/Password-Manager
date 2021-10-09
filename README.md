@@ -12,7 +12,7 @@ Python >= 3.6
 ```bash
 $ pip install cryptography
 ```
-Then just run the main.py file in CMD or any linux Terminal you prefer.
+Then just run the main.py file in CMD or any Terminal you prefer.
 
 ## TO-DO
 A Gui.
