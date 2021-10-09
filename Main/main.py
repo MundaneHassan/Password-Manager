@@ -119,8 +119,12 @@ class PasswordManager:
         __password = input("Enter your password here, you can type 'generate' to get one: ")
 
         if __password.lower() == "generate":
-            self._ASCIIs = [f"{chr(i)}" for i in range(31, 127)]
-            __password = "".join([secrets.choice(self._ASCIIs) for _ in range(12)])
+            self.ascii_lowercase = 'abcdefghijklmnopqrstuvwxyz'
+            self.ascii_uppercase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+            self.digits = '0123456789'
+            self.punctuation = r"""!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~"""
+            self.combined = self.ascii_uppercase + self.ascii_lowercase + self.digits + self.punctuation
+            __password = "".join([secrets.choice(self.combined) for _ in range(12)])
             print("Password created Successfully!\n")
 
         __website_name = input("Enter the website here: ")
