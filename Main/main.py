@@ -118,7 +118,6 @@ class PasswordManager:
         __username = input("Enter your username here: ")
         __password = input("Enter your password here, you can type 'generate' to get one: ")
 
-        # if user wanted to make password
         if __password.lower() == "generate":
             self._ASCIIs = [f"{chr(i)}" for i in range(31, 127)]
             __password = "".join([secrets.choice(self._ASCIIs) for _ in range(12)])
@@ -129,10 +128,8 @@ class PasswordManager:
 
         __details = [__username, __password, __website_name, __email]
 
-        # encrypting the details
         __encrypted_stuff = [self.__fer.encrypt(i.encode()) for i in __details]
 
-        # storing the details
         with open("Sign.bin", "ab") as __sign_file:
             pickle.dump(__encrypted_stuff, __sign_file)
 
@@ -154,20 +151,18 @@ class PasswordManager:
 
         try:
             while True:
-                # Loading the encrypted details
                 __encrypted_details = pickle.load(__sign_file)
 
                 __names = ["Name", "Password", "Email", "Website"]
 
                 __details = [self.__fer.decrypt(i).decode() for i in __encrypted_details]
 
-                # printing the details
                 print(f"{'-' * 40}\n{'New group':^40}\n{'-' * 40}")
 
                 for __name, __detail in zip(__names, __details):
                     print(f"{__name:^15} : {__detail:^15}")
                 print("-" * 60)
-        except EOFError:  # if file ends
+        except EOFError:  
             __sign_file.close()
             print("End of Details")
         except Exception as __e:
