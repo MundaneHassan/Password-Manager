@@ -152,7 +152,6 @@ class PasswordManager:
             return
         except Exception as __e:
             print(f"Unknown Error occurred:\n{__e}")
-
         try:
             while True:
                 __encrypted_details = pickle.load(__sign_file)
@@ -161,11 +160,11 @@ class PasswordManager:
 
                 __details = [self.__fer.decrypt(i).decode() for i in __encrypted_details]
 
-                print(f"{'-' * 40}\n{'New group':^40}\n{'-' * 40}")
+                print(f"{'':^40}\n{'-' * 40}")
 
                 for __name, __detail in zip(__names, __details):
                     print(f"{__name:^15} : {__detail:^15}")
-                print("-" * 60)
+                print("-" * 40)
         except EOFError:  
             __sign_file.close()
             print("End of Details")
