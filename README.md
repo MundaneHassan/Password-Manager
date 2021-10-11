@@ -1,6 +1,6 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/MundaneHassan/Password-Manager) ![GitHub](https://img.shields.io/github/license/MundaneHassan/Password-Manager)
 ## Password-Manager
-A simple password manager that uses the Fernet module from the [Cryptography](https://pypi.org/project/cryptography/) library.
+A simple password manager that uses the Fernet module from the [Cryptography](https://github.com/pyca/cryptography/) library.
 
 We STRONGLY recommend first obfuscating the program then using it, a library like pyarmor will work fine.
 
