@@ -157,7 +157,7 @@ class PasswordManager:
             while True:
                 __encrypted_details = pickle.load(__sign_file)
 
-                __names = ["Name", "Password", "Email", "Website"]
+                __names = ["Name", "Password", "Website", "Email"]
 
                 __details = [self.__fer.decrypt(i).decode() for i in __encrypted_details]
 
