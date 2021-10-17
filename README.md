@@ -6,6 +6,7 @@ We STRONGLY recommend first obfuscating the program then using it, a library lik
 
 ## Requirements 
 Python >= 3.6
+Cryptography Library
 
 ## Installation
 
